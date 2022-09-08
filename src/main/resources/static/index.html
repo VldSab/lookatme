@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lookatme</title>
+
+    <h1>Hello</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <h1>
+        <script type="text/javascript">
+            var xhr = new XMLHttpRequest();
+            var url = "http://localhost:8080/api";
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            $.getJSON('https://json.geoiplookup.io/?callback=?', function (data) {
+                document.write("Good by");
+                xhr.send((JSON.stringify(data, null, 2)));
+            });
+        </script>
+    </h1>
+</head>
+<body>
+
+</body>
+</html>
